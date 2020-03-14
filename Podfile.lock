@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (5.0.0.beta.1)
+  - SDWebImage (3.8.3):
+    - SDWebImage/Core (= 3.8.3)
+  - SDWebImage/Core (3.8.3)
+
+DEPENDENCIES:
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `alamofire5`)
+  - SDWebImage (~> 3.8)
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :branch: alamofire5
+    :git: https://github.com/Alamofire/Alamofire.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: 2c99a6691dac40f03ef9f9e89aaf2eb751843393
+    :git: https://github.com/Alamofire/Alamofire.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
+  SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
+
+PODFILE CHECKSUM: d1b180617858594cf9280e8bd6ae8eee674886e0
+
+COCOAPODS: 1.9.0.beta.3

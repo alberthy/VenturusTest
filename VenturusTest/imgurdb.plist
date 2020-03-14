@@ -2,13 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>VenturusTest.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-	</dict>
+	<key>CLIENT_ID</key>
+	<string>Client-ID 1ceddedc03a5d71</string>
+	<key>API</key>
+	<string>https://api.imgur.com/3</string>
+	<key>CONTENT_TYPE</key>
+	<string>application/json</string>
 </dict>
 </plist>

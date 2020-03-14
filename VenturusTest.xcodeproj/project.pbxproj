@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		24933BCA241D189A00C83BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24933BC8241D189A00C83BCD /* Main.storyboard */; };
 		24933BCC241D189F00C83BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24933BCB241D189F00C83BCD /* Assets.xcassets */; };
 		24933BCF241D189F00C83BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24933BCD241D189F00C83BCD /* LaunchScreen.storyboard */; };
+		24933BD8241D1AF400C83BCD /* CatsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24933BD7241D1AF400C83BCD /* CatsCollectionViewController.swift */; };
+		24933BDB241D201D00C83BCD /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24933BDA241D201D00C83BCD /* ResponseData.swift */; };
+		24933BDD241D205C00C83BCD /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24933BDC241D205C00C83BCD /* Cat.swift */; };
+		24933BDF241D207700C83BCD /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24933BDE241D207700C83BCD /* Image.swift */; };
+		24933BE2241D266D00C83BCD /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24933BE1241D266D00C83BCD /* CatService.swift */; };
+		24933BE4241D280900C83BCD /* imgurdb.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24933BE3241D280900C83BCD /* imgurdb.plist */; };
+		24933BE7241D389C00C83BCD /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24933BE6241D389C00C83BCD /* Alert.swift */; };
+		B1317C812ACDBCC754EDDF66 /* Pods_VenturusTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601FB7DEE57537A7ABB5E48C /* Pods_VenturusTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,16 @@
 		24933BCB241D189F00C83BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24933BCE241D189F00C83BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24933BD0241D189F00C83BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24933BD7241D1AF400C83BCD /* CatsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewController.swift; sourceTree = "<group>"; };
+		24933BDA241D201D00C83BCD /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
+		24933BDC241D205C00C83BCD /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		24933BDE241D207700C83BCD /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		24933BE1241D266D00C83BCD /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
+		24933BE3241D280900C83BCD /* imgurdb.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = imgurdb.plist; sourceTree = "<group>"; };
+		24933BE6241D389C00C83BCD /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		515CBEAFB99CAB190A0C17E5 /* Pods-VenturusTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenturusTest.debug.xcconfig"; path = "Target Support Files/Pods-VenturusTest/Pods-VenturusTest.debug.xcconfig"; sourceTree = "<group>"; };
+		601FB7DEE57537A7ABB5E48C /* Pods_VenturusTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenturusTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EED70FA324330313EDD8F34 /* Pods-VenturusTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenturusTest.release.xcconfig"; path = "Target Support Files/Pods-VenturusTest/Pods-VenturusTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1317C812ACDBCC754EDDF66 /* Pods_VenturusTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21F37AB5D4967AE47121936D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				515CBEAFB99CAB190A0C17E5 /* Pods-VenturusTest.debug.xcconfig */,
+				8EED70FA324330313EDD8F34 /* Pods-VenturusTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		23351950524A5CCB5E68BCA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				601FB7DEE57537A7ABB5E48C /* Pods_VenturusTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		24933BB6241D189A00C83BCD = {
 			isa = PBXGroup;
 			children = (
 				24933BC1241D189A00C83BCD /* VenturusTest */,
 				24933BC0241D189A00C83BCD /* Products */,
+				21F37AB5D4967AE47121936D /* Pods */,
+				23351950524A5CCB5E68BCA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +94,10 @@
 		24933BC1241D189A00C83BCD /* VenturusTest */ = {
 			isa = PBXGroup;
 			children = (
+				24933BE5241D384600C83BCD /* Util */,
+				24933BE0241D260800C83BCD /* Network */,
+				24933BD9241D1FFE00C83BCD /* Model */,
+				24933BD6241D194D00C83BCD /* ViewController */,
 				24933BC2241D189A00C83BCD /* AppDelegate.swift */,
 				24933BC4241D189A00C83BCD /* SceneDelegate.swift */,
 				24933BC6241D189A00C83BCD /* ViewController.swift */,
@@ -63,8 +105,43 @@
 				24933BCB241D189F00C83BCD /* Assets.xcassets */,
 				24933BCD241D189F00C83BCD /* LaunchScreen.storyboard */,
 				24933BD0241D189F00C83BCD /* Info.plist */,
+				24933BE3241D280900C83BCD /* imgurdb.plist */,
 			);
 			path = VenturusTest;
+			sourceTree = "<group>";
+		};
+		24933BD6241D194D00C83BCD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				24933BD7241D1AF400C83BCD /* CatsCollectionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		24933BD9241D1FFE00C83BCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24933BDA241D201D00C83BCD /* ResponseData.swift */,
+				24933BDC241D205C00C83BCD /* Cat.swift */,
+				24933BDE241D207700C83BCD /* Image.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24933BE0241D260800C83BCD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				24933BE1241D266D00C83BCD /* CatService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		24933BE5241D384600C83BCD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				24933BE6241D389C00C83BCD /* Alert.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24933BD3241D189F00C83BCD /* Build configuration list for PBXNativeTarget "VenturusTest" */;
 			buildPhases = (
+				06BC119C117FB63648C23D8E /* [CP] Check Pods Manifest.lock */,
 				24933BBB241D189A00C83BCD /* Sources */,
 				24933BBC241D189A00C83BCD /* Frameworks */,
 				24933BBD241D189A00C83BCD /* Resources */,
+				6AEC69603655B3CEE3108AB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24933BCF241D189F00C83BCD /* LaunchScreen.storyboard in Resources */,
+				24933BE4241D280900C83BCD /* imgurdb.plist in Resources */,
 				24933BCC241D189F00C83BCD /* Assets.xcassets in Resources */,
 				24933BCA241D189A00C83BCD /* Main.storyboard in Resources */,
 			);
@@ -133,14 +213,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06BC119C117FB63648C23D8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VenturusTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AEC69603655B3CEE3108AB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VenturusTest/Pods-VenturusTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VenturusTest/Pods-VenturusTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VenturusTest/Pods-VenturusTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24933BBB241D189A00C83BCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24933BE7241D389C00C83BCD /* Alert.swift in Sources */,
+				24933BDF241D207700C83BCD /* Image.swift in Sources */,
 				24933BC7241D189A00C83BCD /* ViewController.swift in Sources */,
 				24933BC3241D189A00C83BCD /* AppDelegate.swift in Sources */,
+				24933BDD241D205C00C83BCD /* Cat.swift in Sources */,
+				24933BE2241D266D00C83BCD /* CatService.swift in Sources */,
+				24933BDB241D201D00C83BCD /* ResponseData.swift in Sources */,
 				24933BC5241D189A00C83BCD /* SceneDelegate.swift in Sources */,
+				24933BD8241D1AF400C83BCD /* CatsCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +410,7 @@
 		};
 		24933BD4241D189F00C83BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 515CBEAFB99CAB190A0C17E5 /* Pods-VenturusTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +429,7 @@
 		};
 		24933BD5241D189F00C83BCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EED70FA324330313EDD8F34 /* Pods-VenturusTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
