@@ -18,10 +18,17 @@ class CatsCollectionViewController: UICollectionViewController {
     
     let backGroundImageView = UIImageView()
     
+   private let sectionInsets =
+    UIEdgeInsets(top: 30.0, left: 0, bottom: 30.0, right: 0)
+   
+   private let itemsPerRow: CGFloat = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.applyBackground()
         self.fetchData()
+        
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func applyBackground(){
@@ -123,4 +130,31 @@ extension JSONDecoder {
             return .failure(error)
         }
     }
+}
+
+extension CatsCollectionViewController : UICollectionViewDelegateFlowLayout {
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+    let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+    let availableWidth = view.frame.width - paddingSpace
+    let widthPerItem = availableWidth / itemsPerRow
+    
+    return CGSize(width: widthPerItem, height: widthPerItem)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      insetForSectionAt section: Int) -> UIEdgeInsets {
+    return sectionInsets
+  }
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return sectionInsets.left
+  }
+    
 }
