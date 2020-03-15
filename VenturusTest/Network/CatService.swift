@@ -16,13 +16,17 @@ class CatService {
     var headers: HTTPHeaders
     var api: String
     
+    // configura o header com o content-type e chave de autorização para realizar a requisição
     init() {
+        
         connection = NSDictionary(contentsOfFile: path)!
         headers = [
           "Content-Type": connection.object(forKey: "CONTENT_TYPE") as! String,
           "Authorization": connection.object(forKey: "CLIENT_ID") as! String
         ]
+        
         api = connection.object(forKey: "API") as! String
+        
     }
     
     /*

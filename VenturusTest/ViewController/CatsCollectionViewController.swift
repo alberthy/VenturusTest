@@ -18,27 +18,25 @@ class CatsCollectionViewController: UICollectionViewController {
     
     let backGroundImageView = UIImageView()
     
-   private let sectionInsets =
-    UIEdgeInsets(top: 30.0, left: 0, bottom: 30.0, right: 0)
+   private let sectionInsets = UIEdgeInsets(top: 30.0, left: 8.0, bottom: 30.0, right: 8.0)
    
-   private let itemsPerRow: CGFloat = 2
+   private let itemsPerRow: CGFloat = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.applyBackground()
         self.fetchData()
-        
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func applyBackground(){
 
-        backGroundImageView.image = UIImage(named: "background")
+        backGroundImageView.image = UIImage(named: "background_new")
         
         collectionView.backgroundView = backGroundImageView
         
     }
     
+    // realizar a consulta na api em busca da lista de cats
     func fetchData(){
         
         self.catService.fetchCats().responseData { (response) in
@@ -98,6 +96,7 @@ class CatCollectionViewCell: UICollectionViewCell {
         // define a imagem no item ou o placeholder caso ocorra algo.
         imageView.sd_setImage(with: URL(string: link), placeholderImage: UIImage(named: "place_holder.png"))
         
+        // aplica a decoração
         imageView.layer.cornerRadius = 5.0
         imageView.layer.borderWidth = 0.2
         
@@ -141,8 +140,9 @@ extension CatsCollectionViewController : UICollectionViewDelegateFlowLayout {
     let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
     let availableWidth = view.frame.width - paddingSpace
     let widthPerItem = availableWidth / itemsPerRow
-    
+
     return CGSize(width: widthPerItem, height: widthPerItem)
+    
   }
   
   func collectionView(_ collectionView: UICollectionView,
