@@ -18,7 +18,7 @@ class CatsCollectionViewController: UICollectionViewController {
     
     let backGroundImageView = UIImageView()
     
-   private let sectionInsets = UIEdgeInsets(top: 30.0, left: 8.0, bottom: 30.0, right: 8.0)
+    private let sectionInsets = UIEdgeInsets(top: 30.0, left: 5.0, bottom: 30.0, right: 5.0)
    
    private let itemsPerRow: CGFloat = 3
     
@@ -30,7 +30,7 @@ class CatsCollectionViewController: UICollectionViewController {
     
     func applyBackground(){
 
-        backGroundImageView.image = UIImage(named: "background_new")
+        backGroundImageView.image = UIImage(named: "background")
         
         collectionView.backgroundView = backGroundImageView
         
@@ -40,13 +40,7 @@ class CatsCollectionViewController: UICollectionViewController {
     func fetchData(){
         
         self.catService.fetchCats().responseData { (response) in
-            
-            if response.result.isFailure {
-                print("Ocorreu erro na requisição")
-                Alert(self).show(message: "Ocorreu um erro ")
-                return
-            }
-            
+ 
             let decoder = JSONDecoder()
             
             let responseSuccess: Swift.Result<ResponseData, Error> = decoder.decodeResponse(from: response)
@@ -93,13 +87,13 @@ class CatCollectionViewCell: UICollectionViewCell {
         // captura a primeira image do gato
         let link = cat.images?[0].link ?? ""
         
-        // define a imagem no item ou o placeholder caso ocorra algo.
+        // define a imagem no item ou o placeholder caso ocorra a2lgo.
         imageView.sd_setImage(with: URL(string: link), placeholderImage: UIImage(named: "place_holder.png"))
         
         // aplica a decoração
         imageView.layer.cornerRadius = 5.0
         imageView.layer.borderWidth = 0.2
-        
+        	
     }
     
 }
@@ -131,6 +125,7 @@ extension JSONDecoder {
     }
 }
 
+// Extension para definir items por linha
 extension CatsCollectionViewController : UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView,
@@ -156,5 +151,6 @@ extension CatsCollectionViewController : UICollectionViewDelegateFlowLayout {
                       minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return sectionInsets.left
   }
+    
     
 }
